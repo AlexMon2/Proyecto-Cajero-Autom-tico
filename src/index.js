@@ -146,4 +146,53 @@ function sumar() {
   }
 };
 
-btnAceptar.addEventListener("click", sumar);
+function sumar2() {
+  let total2 = inputMonto + usuario2.saldo;
+  if (total2 < 990) {
+    document.getElementById("saldo-actual").textContent = " " + total2;
+  } else {
+    alert("Monto inválido. Intente de nuevo:");
+  }
+};
+
+function sumar3() {
+  let total3 = inputMonto + usuario3.saldo;
+  if (total3 < 990) {
+    document.getElementById("saldo-actual").textContent = " " + total3;
+  } else {
+    alert("Monto inválido. Intente de nuevo:");
+  }
+};
+
+btnAceptar.addEventListener("click", sumar, sumar2, sumar3);
+
+// Ejecutar Retirar Monto
+
+function restar() {
+  let total4 = inputMonto - usuario1.saldo;
+  if (total4 > 10) {
+    document.getElementById("saldo-actual").textContent = " " + total4;
+  } else {
+    alert("Monto inválido. Intente de nuevo:");
+  }
+};
+
+function restar2() {
+  let total5 = inputMonto - usuario2.saldo;
+  if (total5 > 10) {
+    document.getElementById("saldo-actual").textContent = " " + total5;
+  } else {
+    alert("Monto inválido. Intente de nuevo:");
+  }
+};
+
+function restar3() {
+  let total6 = inputMonto - usuario3.saldo;
+  if (total6 > 10) {
+    document.getElementById("saldo-actual").textContent = " " + total6;
+  } else {
+    alert("Monto inválido. Intente de nuevo:");
+  }
+};
+
+btonAceptar.addEventListener("click", restar, restar2, restar3);
