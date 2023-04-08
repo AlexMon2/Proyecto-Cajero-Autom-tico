@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>CAJERO AUTOMÁTICO</h1>
+
+    <label for="cuentas" class="sel">Seleccione una cuenta:</label><br>
+    <select id="cuentas" name="cuentas">
+        <option value="usuario1">Rogelio</option>
+        <option value="usuario2">Alexis</option>
+        <option value="usuario3">Samuel</option>
+    </select>
+    <br>
+    <button class="select">Seleccionar</button><br>
+
+    <label for="pass" class="sel">Ingrese la contraseña:</label><br>
+    <input type="password" id="pass"><br>
+    <button id="verificar">Ingresar</button>
+
+    <div class="opciones hidden">
+        <button class="consultar-saldo">Consultar Saldo</button>
+        <button class="ingresar-monto">Ingresar Monto</button>
+        <button class="retirar-monto">Retirar Monto</button>
+    </div>
+
+    <div class="saldo hidden">
+        <button class="cerrar-saldo">&times;</button>
+        <p id="parrafo">Usted cuenta con un saldo de: $</p>
+        <p id="saldo"></p>
+    </div>
+
+    <div class="montos hidden">
+        <button class="cerrar-montos">&times;</button>
+        <label for="monto" class="ingr">Ingrese el monto:</label> <br>
+        <input type="number" id="monto"> 
+        <button id="aceptar">Aceptar</button>
+        <p>Su saldo actual es de: $</p>
+        <p id="saldo-actual"></p>
+    </div>
+
+    <div class="montos2 hidden">
+        <button class="cerrar-montos2">&times;</button>
+        <label for="monto2" class="ingr2">Ingrese el monto:</label> <br>
+        <input type="number" id="monto2"> 
+        <button id="aceptar2">Aceptar</button>
+        <p>Su saldo actual es de: $<span id="saldo-actual2"></span></p>
+    </div>
+
+    <h4 class="error hidden">Contraseña incorrecta, vuelva a intentarlo.</h4>
+
+
+    <script src="./src/index.js"></script>
+</body>
+</html>
